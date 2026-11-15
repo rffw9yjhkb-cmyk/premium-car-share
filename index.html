@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中央区湊 高級車会員制レンタカー | Premium Car Share</title>
+<meta name="description" content="中央区湊、会員限定のTesla専用カーシェア。限定5名のプレミアムな移動体験。事前会員募集中。">
+<style>
+  :root{
+    --bg:#0b0b0d; --bg2:#121216; --card:#16161b; --line:#26262e;
+    --text:#f2f2f4; --sub:#a7a7b3; --accent:#c9a86a; --accent2:#e8cf9a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;line-height:1.8;letter-spacing:.02em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(11,11,13,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;justify-content:space-between;align-items:center;height:64px}
+  .logo{font-size:15px;letter-spacing:.28em;font-weight:600}
+  .logo span{color:var(--accent)}
+  .nav a.btn{border:1px solid var(--accent);color:var(--accent2);padding:8px 18px;border-radius:999px;font-size:13px;letter-spacing:.12em}
+  .nav a.btn:hover{background:var(--accent);color:#111}
+  .hero{position:relative;padding:170px 0 120px;text-align:center;background:
+    linear-gradient(180deg,rgba(11,11,13,.55),rgba(11,11,13,.92)),
+    url('https://readdy.ai/api/search-image?query=luxury%20black%20Tesla%20Model%20S%20driving%20fast%20on%20modern%20urban%20highway%20at%20night%20with%20motion%20blur%20and%20illuminated%20city%20skyline%20in%20background%20showcasing%20speed%20and%20elegance%20in%20cinematic%20automotive%20photography%20with%20dramatic%20lighting&width=1920&height=1080&seq=hero-tesla-drive&orientation=landscape') center/cover no-repeat}
+  .badge{display:inline-block;border:1px solid var(--accent);color:var(--accent2);border-radius:999px;padding:6px 18px;font-size:12px;letter-spacing:.3em;margin-bottom:34px}
+  .hero h1{font-size:clamp(38px,7vw,68px);font-weight:700;letter-spacing:.08em;line-height:1.3}
+  .hero h1 .thin{display:block;font-size:clamp(18px,3vw,26px);font-weight:400;color:var(--sub);letter-spacing:.4em;margin-top:14px}
+  .hero p.lead{margin:34px auto 8px;font-size:clamp(16px,2.4vw,20px)}
+  .hero p.sub{color:var(--sub);font-size:14px}
+  .cta{display:inline-block;margin-top:42px;background:var(--accent);color:#141310;font-weight:700;letter-spacing:.14em;padding:16px 42px;border-radius:999px;font-size:15px}
+  .cta:hover{background:var(--accent2)}
+  section{padding:96px 0}
+  .kicker{color:var(--accent);font-size:12px;letter-spacing:.42em;text-align:center;margin-bottom:16px}
+  h2{font-size:clamp(26px,4.4vw,38px);text-align:center;letter-spacing:.06em;line-height:1.5;margin-bottom:20px}
+  .center-sub{text-align:center;color:var(--sub);max-width:640px;margin:0 auto;font-size:15px}
+  .exp-img{margin:52px auto 0;max-width:880px;border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+  .exp-img img{width:100%;display:block}
+  .stats{display:flex;justify-content:center;gap:72px;margin-top:56px;flex-wrap:wrap}
+  .stat{text-align:center}
+  .stat .num{font-size:44px;font-weight:700;color:var(--accent2)}
+  .stat .lbl{color:var(--sub);font-size:13px;letter-spacing:.2em;margin-top:4px}
+  .alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:52px}
+  .plan{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:34px 26px;text-align:center}
+  .plan h3{font-size:14px;letter-spacing:.3em;color:var(--sub);font-weight:500}
+  .plan .price{font-size:34px;font-weight:700;margin:14px 0 6px}
+  .plan .note{color:var(--sub);font-size:13px}
+  .voices{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:52px}
+  .voice{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:32px 28px}
+  .stars{color:var(--accent);letter-spacing:.3em;font-size:14px}
+  .voice blockquote{font-size:15px;margin:16px 0 22px;color:#e6e6ea}
+  .who{display:flex;align-items:center;gap:14px}
+  .avatar{width:46px;height:46px;border-radius:50%;background:#2a2a33;border:1px solid var(--accent);color:var(--accent2);display:flex;align-items:center;justify-content:center;font-size:13px;letter-spacing:.05em;flex:none}
+  .who .name{font-weight:600;font-size:14px}
+  .who .meta{color:var(--sub);font-size:12px}
+  .philosophy{text-align:center}
+  .philosophy .big{font-size:clamp(30px,5.6vw,52px);line-height:1.6;letter-spacing:.1em;font-weight:700}
+  .philosophy .big span{color:var(--accent2)}
+  .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:56px;text-align:left}
+  .feature{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px 26px}
+  .feature .num{font-size:30px;font-weight:700;color:var(--accent2)}
+  .feature h3{font-size:16px;margin:8px 0 6px;letter-spacing:.1em}
+  .feature p{color:var(--sub);font-size:14px}
+  .register{text-align:center}
+  .register p{color:var(--sub);font-size:14px;margin-top:10px}
+  footer{border-top:1px solid var(--line);padding:36px 0;text-align:center;color:var(--sub);font-size:12px;letter-spacing:.14em}
+  @media (max-width:640px){ .stats{gap:40px} section{padding:72px 0} }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="logo">PREMIUM <span>CAR SHARE</span></div>
+    <a class="btn" href="#register">事前会員登録</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="badge">PRE-LAUNCH ・ 事前会員募集中 ・ 限定5名</div>
+    <h1>Tesla専用カーシェア<span class="thin">中央区湊、会員限定</span></h1>
+    <p class="lead">限定5名だから、まるでマイカーのように。</p>
+    <p class="sub">利用時間の重複を最小限に抑え、あなた専用の体験を。</p>
+    <a class="cta" href="#register">事前会員登録はこちら</a>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">DRIVING EXPERIENCE</div>
+    <h2>会員だけの特別な体験<br>限定5名だから実現できる体験</h2>
+    <p class="center-sub">会員数を限定することで、利用時間の重複を最小限に。まるでマイカーのように、いつでも使える安心感。駐車場代や維持費の心配なく、Teslaのある生活を。</p>
+    <div class="exp-img">
+      <img src="https://readdy.ai/api/search-image?query=Tesla%20Model%20S%20driving%20on%20scenic%20coastal%20highway%20with%20ocean%20view%20at%20golden%20hour%20sunset%20showcasing%20elegant%20electric%20vehicle%20in%20motion%20with%20beautiful%20natural%20landscape%20and%20dramatic%20sky%20in%20cinematic%20automotive%20photography&width=1920&height=800&seq=tesla-driving-scenic&orientation=landscape" alt="Tesla Driving">
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="num">3.2秒</div><div class="lbl">0-100km/h</div></div>
+      <div class="stat"><div class="num">600km</div><div class="lbl">航続距離</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="kicker">PRICING</div>
+    <h2>料金プラン</h2>
+    <p class="center-sub">明確でシンプルな料金体系</p>
+    <div class="plans">
+      <div class="plan"><h3>入会金</h3><div class="price">¥50,000</div><div class="note">初回のみ</div></div>
+      <div class="plan"><h3>月額会費</h3><div class="price">¥30,000</div><div class="note">10時間/月</div></div>
+      <div class="plan"><h3>超過料金</h3><div class="price">¥3,000</div><div class="note">10時間超過分/時間</div></div>
+      <div class="plan"><h3>デポジット</h3><div class="price">¥100,000</div><div class="note">ローンチ時お支払い</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">VOICES</div>
+    <h2>事前登録者の声</h2>
+    <div class="voices">
+      <div class="voice">
+        <div class="stars">★★★★★ 5.0</div>
+        <blockquote>都心での移動が劇的に快適になりそうです。高級車を所有する必要がなく、必要な時だけ利用できる。しかも5名限定だから予約の取り合いもない。まさに理想的なサービスです。</blockquote>
+        <div class="who"><div class="avatar">T.K</div><div><div class="name">T.K様</div><div class="meta">40代・会社経営・佃3丁目在住</div></div></div>
+      </div>
+      <div class="voice">
+        <div class="stars">★★★★★ 5.0</div>
+        <blockquote>自分の車が欲しかったのですが、近隣は駐車場代が高く維持費が高額で購入を悩んでいました。Teslaに乗ってみたかったので、このサービスは本当にありがたいです。</blockquote>
+        <div class="who"><div class="avatar">S.M</div><div><div class="name">S.M様</div><div class="meta">30代・IT企業勤務・湊3丁目在住</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt philosophy">
+  <div class="wrap">
+    <div class="kicker">OUR PHILOSOPHY</div>
+    <div class="big">所有から<span>体験</span>へ<br>新しいカーライフ</div>
+    <p class="center-sub" style="margin-top:18px">中央区湊から始まる、プレミアムな移動体験</p>
+    <div class="features">
+      <div class="feature"><div class="num">5名</div><h3>限定会員</h3><p>マイカー感覚で使える、Exclusive Onlyの会員制。</p></div>
+      <div class="feature"><div class="num">24h</div><h3>いつでも利用可能</h3><p>いつでも予約・利用可能。深夜・早朝も対応。あなたのライフスタイルに合わせた柔軟なサービス。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="register" id="register">
+  <div class="wrap">
+    <div class="kicker">PRE-REGISTRATION</div>
+    <h2>事前会員登録</h2>
+    <p>限定5名の事前会員を募集しています。登録フォームは準備中です。公開まで今しばらくお待ちください。</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Premium Car Share ・ 中央区湊</div>
+</footer>
+</body>
+</html>
